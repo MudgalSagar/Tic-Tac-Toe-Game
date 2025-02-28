@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: black; /* Base dark background */
+  color: white;
+  margin: 0;
+  overflow: hidden;
+  position: relative; /* Needed to ensure proper layering */
+}
+
+/* Animated Neon Background */
+@keyframes neonGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.neon-background {
+  position: fixed; /* Ensures it covers the whole screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ff6600, #6600ff);
+  background-size: 400% 400%;
+  animation: neonGlow 8s infinite alternate;
+  z-index: -1;
+  filter: blur(80px); /* Softens the glow effect */
+  opacity: 0.6; /* Adjust brightness */
+}
+
+.game {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.7);
+}
+
+.status {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #00ffcc; /* Neon cyan text */
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #00ffcc;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark squares */
+  color: #00ffcc;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.square:hover {
+  background-color: #00ffcc;
+  color: black;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px #00ffcc;
+}
+
+.game-info {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.game-info ol {
+  padding: 0;
+  list-style: none;
+}
+
+.game-info button {
+  margin: 5px;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none;
+  background-color: #ff0080;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  border-radius: 5px;
+}
+
+.game-info button:hover {
+  background-color: #ff4da6;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px #ff4da6;
+}
