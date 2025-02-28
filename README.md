@@ -4,8 +4,7 @@ A fun and interactive **Tic Tac Toe** game built with **React**! Play against a 
 
 ## **Features**  
 ✅ Play **Player vs Player** or **Player vs AI**  
-✅ Simple and **responsive UI**  
-✅ **Winning animation** when a player wins  
+✅ Simple and **responsive UI**   
 ✅ **Sound effects** for clicks and wins  
 ✅ Restart the game anytime  
 
